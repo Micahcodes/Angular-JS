@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AngularTutorial</title>
+  <title>Angular Tutorial</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/css/foundation.min.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div ng-app="todoList">
+    <input type="text" ng-model="data.message">
+    <h1>{{data.message}}</h1>
+  </div>
 
+
+
+
+<%= yield %>
 </body>
 </html>
